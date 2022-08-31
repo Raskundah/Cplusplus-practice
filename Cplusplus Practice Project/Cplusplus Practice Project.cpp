@@ -5,7 +5,16 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int testInt = 5;
+    float testFloat = 50.664;
+
+    bool testBool = true;
+
+    std::cout << "Hello World!\n8001\nthis line has text that isn't worth reading\n"
+
+        << testBool;
+
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
