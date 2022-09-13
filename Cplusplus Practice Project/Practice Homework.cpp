@@ -60,5 +60,16 @@ int main()
 	
 	// end of problem three.
 
+	std::cout << "\n";
+
+	//problem four
+
+	std::string codePhrase = "The quick brown fox jumped over the lazy dogs";
+	std::string codeWord = "fox";
+
+	std::size_t found = codePhrase.find(codeWord);
+	if (found != std::string::npos)
+		std::cout << "first 'codeword' found at string index " << found << '\n';
+
 
 }
