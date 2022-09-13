@@ -71,5 +71,9 @@ int main()
 	if (found != std::string::npos)
 		std::cout << "first 'codeword' found at string index " << found << '\n';
 
+	//end of problem four.
+
+
+
 
 }
