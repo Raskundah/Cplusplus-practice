@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include<string>
+#include <vector>
+#include <stdlib.h>  // to use rand
+#include <time.h> //used to eed 
 
 int main()
 {
-    //eambles of variable types
+ /* //examples of variable types
 
     int testInt = 5;
     float testFloat = 50.664;
@@ -117,6 +120,114 @@ int main()
         {
             std::cout << "Decision was false!\n";
         }
+
+        */
+
+    int intArray[] = {1, 0, 3};
+    const int intArraySize = 3;
+    int intArrayB[intArraySize];
+
+    // Declare a vector
+
+    std::vector<int> intVector;
+
+    // add items to the vector using a function called
+
+    //push_back() and it adds, no surprise to the back (end) of the vector
+
+    intVector.push_back(5);  // vector = { 5}
+    intVector.push_back(2);  // vector = { 5, 2}
+    intVector.push_back(456); // vector = { 5, 2, 456}
+    intVector.push_back(69); // vector = { 5, 2, 456, 45}
+    intVector.push_back(3011); // vector = { 5, 2, 456, 69, 3011}
+    
+    //you can get the current size of a vector using name.size
+
+    std::cout << "Vector is : " << intVector.size() << "\n";
+
+    //You can access utems in a vector just like an array.
+
+    std::cout << "Vector index 0 is : " << intVector[0] << "\n";
+    std::cout << "Vector index 1 is : " << intVector[1] << "\n";
+
+    
+
+    //change value of an index within vector
+
+    intVector[2] = 666;
+
+    // BE CAREFUL, THAT INDEX MUST BE CREATED, OR IT WILL ERROR. OR WORSE!!!!!!!!!!!!
+
+    //intVector.pop_back(); // delete 666
+
+    // items can be removed using the erase function
+
+    //erase uses iterators.
+
+    //an iterator is like a marker for a particular point in the vector.
+
+    //lets erase first elements.
+    //paramater 1 starting point, paramater 2 end beforethis point, non inclusive
+    intVector.erase(intVector.begin(), intVector.begin() + 2);
+
+    std::cout << "Vector is : " << intVector.size() << "\n";
+
+    std::cout << "Vector index 1 is : " << intVector[0] << "\n";
+
+    std::cout << "Beginning loop, be careful!" << "\n";
+
+    for(size_t i = 0; i < intVector.size() ;++i )
+    {
+        std::cout << "Vector index " << i << " is " << intVector[i] << "\n";
+    }
+
+    std::cout << "Completed the loop!";
+
+    int totalRandom = std::rand();
+
+    //Anywhere from 0 to RAND_MAX, which is HUUUUUUUUUUUUUUGE.
+
+    
+    std::cout << "RANDOM NUMBER IS " << totalRandom << "\n";
+    
+    totalRandom = std::rand();
+
+    std::cout << "RANDOM NUMBER IS " << totalRandom << "\n";
+    
+    totalRandom = std::rand();
+    std::cout << "RANDOM NUMBER IS " << totalRandom << "\n";
+    
+    totalRandom = std::rand();
+
+    // a seed is a starting point for random alcs
+
+    // int seed = 64645;
+
+    //int range = 100;
+
+    int lowerNumber = 50;
+    int upperNumber = 150;
+
+    int range = upperNumber - lowerNumber;
+    std::srand(time(NULL));
+    int seededRandom = std::rand() % range; + lowerNumber;
+    std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
+
+    std::cout << "\n";
+
+    seededRandom = std::rand() % range; + lowerNumber;
+    std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
+
+    seededRandom = std::rand() % range; + lowerNumber;
+    std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
+
+    seededRandom = std::rand() % range; + lowerNumber;
+    std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
+
+    seededRandom = std::rand() % range; + lowerNumber;
+    std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
+
+    
     
 }
 
