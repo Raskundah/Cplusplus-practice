@@ -7,7 +7,7 @@
 #include <stdlib.h>  // to use rand
 #include <time.h> //used to eed 
 
-int main()
+int Oldmain()
 {
  /* //examples of variable types
 
@@ -227,7 +227,7 @@ int main()
     seededRandom = std::rand() % range; + lowerNumber;
     std::cout << "RANDOM NUMBER IS " << seededRandom << "\n";
 
-    
+    return 0;
     
 }
 
